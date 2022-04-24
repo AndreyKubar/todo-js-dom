@@ -1,79 +1,109 @@
-body {
-
-  background-color: rgb(26, 97, 97);
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.todo__caption {
-  font-size: 50px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(6, 199, 6);
-}
-
-.container {
+body{
+  background-image: linear-gradient(120deg, #25242c, #888484);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
+  
+}
+
+header,form{
+  display: flex;
+  min-height: 15vh;
+  justify-content: center;
+  align-items: center;    
+}
+
+.todo-caption{
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 50px;
+  font-size: 45px;
+  color: #0db81c;
+  font-family: cursive ;
 }
 
-.new-task{
-  position: relative;
-  padding: 30px 20px;
-}
-.new-task input{
-  width: 75%;
-  height: 45px;
-  padding: 12px;
-  color: #111111;
-  font-weight: 500;
-  position: relative;
-  border-radius: 5px;
-  font-family: 'Poppins',sans-serif;
-  font-size: 15px;
-  border: 2px solid #d1d3d4;
-}
-
-.new-task input:focus{
-  outline: none;
-  border-color: #0d75ec;
-}
-.new-task button{
-  position: relative;
-  float: right;
-  font-weight: 500;
-  font-size: 16px;
-  background-color: #0d75ec;
+form input, form button{
+  padding: 0.4rem;
   border: none;
-  color: #ffffff;
+  font-size: 1.6rem;
+  background: rgb(73, 153, 149);
+}
+
+form button{
+  color: #a3e6dd;
+  background: rgb(73, 153, 149);
   cursor: pointer;
-  outline: none;
-  width: 20%;
-  height: 45px;
-  border-radius: 5px;
-  font-family: 'Poppins',sans-serif;
+  transition: all 0.3s ease;
 }
 
-.filter-todo {
-  display: flex;
+form button:hover{
+  background: #65c06d;
+  color: rgb(89, 177, 48);
 }
 
-.all-todo {
-  border-radius: 10px;
-  border-inline: 0;
-  background-color: rgb(32, 139, 139);
-  color: aliceblue;
-}
-
-.todo-container{
+.btn-group {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-.my-todo{
+
+.clear-btn {
+  border: none;
+  margin-right: 50px;
+  border-radius: 10px;
+  background-color: rgb(45, 105, 218);
+  color: wheat;
+  padding: 5px;
+}
+
+.check-all-btn {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.check-input {
+  width: 20px;
+  height: 20px;
+}
+
+
+.li-todo {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(19, 71, 64);
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.todo_list{
   min-width: 40%;
   list-style: none;
+}
+
+.text-todo {
+  display: block;
+  width: 80%;
+  padding-left: 10px;
+  padding-right: 20px;
+  overflow-wrap: break-word;
+}
+
+.ul-todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 600px;
 }
 
 .todo{
@@ -88,28 +118,65 @@ body {
   transition: all 0.5s ease;
 }
 
-.complete_btn, 
-.delete_btn{
-  padding: 0.5rem;
-  background: #ff3700;
-  color: white;
+.filter-todo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.all {
+  color: #0db81c;
   border: none;
-  margin-left: 0.2rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
-.complete_btn{
-  background: rgb(67, 179, 67);
-}
-.complete_btn:active{
-  background: green;
+  border-radius: 20%;
+  background-color: #2e848f;
+  color: antiquewhite;
+  padding: 5px;
 }
 
-.delete_btn:active{
-  background: #b65337;
+.active {
+  color: #0db81c;
+  border: none;
+  border-radius: 20%;
+  background-color: #2e848f;
+  color: antiquewhite;
+  margin: 0 10px;
+  padding: 5px;
 }
 
-.fa-trash,
-.fa-check{
-  pointer-events: none;
+.completed {
+  color: #0db81c;
+  border: none;
+  border-radius: 20%;
+  background-color: #2e848f;
+  color: antiquewhite;
+  padding: 5px;
+}
+
+.todo-item {
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-page{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-info {
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-danger {
+  width: 40px;
+  height: 40px;
+}
+
+.page.active{
+  background-color: rgb(0, 255, 13);
+  margin: 0;
 }

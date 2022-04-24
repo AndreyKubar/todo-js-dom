@@ -15,40 +15,34 @@
   <div class="container">
     <h2 class="todo-caption">TODO LIST</h2>
 
-
     <form class="new-task">
-      <input class="new-todo" type="text" placeholder="ADD NEW TODO" />
-      <button type="submit" class="add">ADD</button>
+      <input class="input-todo" type="text" placeholder="ADD NEW TODO" />
+      <button type="submit" class="add-todo-btn">ADD</button>
     </form>
 
     <div class="todo-container">
-      <ul class="my-todo">
-        <li>sfdsgds</li>
+      <ul class="ul-todo">
       </ul>
     </div>
 
-<div class="control">
-    <div class="filter-todo">
-      <span id="all">ALL</button>
-      <span id="pending">active</button>
-      <span id="completed">completed</button>
-    </div>
-    <button class="clear-btn">Clear all</button>
+      <div class="control">
+        <div class="filter-todo">
+          <button class="all" id="all-filter">ALL</button>
+          <button class="active" id="active-filter">active</button>
+          <button class="completed" id="completed-filter">completed</button>
+        </div>
+        <div class="btn-group">
+          <button class="clear-btn">delete completed</button>
+          <input type="checkbox" class="check-all-btn">Check all</input>
+        </div>
+      </div>
+
+      <div class="button-page"></div>
 
   </div>
-  
-
-    <nav aria-label="...">
-      <ul class="pagination pagination-sm">
-        <li class="page-item active" aria-current="page">
-          <span class="page-link">1</span>
-        </li>
-      </ul>
-    </nav>
-  </div>
 
 
-
+  <script src="https://cdn.jsdelivr.net/lodash/4.10.0/lodash.js"></script>
   <script src="./script.js"></script>
 </body>
 
